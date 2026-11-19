@@ -1,0 +1,191 @@
+/**
+ * Soft Bento UI Design System - Tokens (Basic Blue & Soft Bento)
+ * Domain-agnostic CSS custom properties for Light & Dark themes.
+ */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Surfaces & Canvas */
+  --canvas: #f7f8fc;
+  --background: #ffffff;
+  --surface: #ffffff;
+  --surface-secondary: #f3f5fa;
+  --surface-tertiary: #e9edf7;
+  --overlay: #ffffff;
+  --sidebar: #ffffff;
+  --sidebar-active: rgba(37, 99, 235, 0.08);
+  --topbar-bg: rgba(255, 255, 255, 0.88);
+
+  /* Typography & Foreground */
+  --foreground: #111827;
+  --muted: #64748b;
+
+  /* Form & Input Fields */
+  --field-background: #ffffff;
+  --field-foreground: #111827;
+  --field-placeholder: #94a3b8;
+  --field-border: rgba(15, 23, 42, 0.11);
+
+  /* Borders & Dividers */
+  --border: rgba(15, 23, 42, 0.065);
+  --separator: rgba(15, 23, 42, 0.06);
+
+  /* Brand & Accent (Basic Blue) */
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-foreground: #ffffff;
+  --focus: #2563eb;
+  --indigo: #4f46e5;
+  --indigo-text: #4338ca;
+
+  /* Charts */
+  --chart-income: #2563eb;
+  --chart-expense: #64748b;
+  --chart-grid: #edf1f7;
+
+  /* Status Colors (Semantic) */
+  --success: #10b981;
+  --success-foreground: #ffffff;
+  --success-text: #047857;
+  --warning: #f59e0b;
+  --warning-foreground: #ffffff;
+  --warning-text: #b45309;
+  --danger: #f43f5e;
+  --danger-foreground: #ffffff;
+  --danger-text: #be123c;
+  --state-pickup: #4f46e5;
+  --state-shipping: #06b6d4;
+  --sky-text: #0e7490;
+
+  /* Soft Pastel Tints & Micro-borders */
+  --blue-soft: rgba(37, 99, 235, 0.085);
+  --indigo-soft: rgba(79, 70, 229, 0.085);
+  --green-soft: rgba(16, 185, 129, 0.09);
+  --amber-soft: rgba(245, 158, 11, 0.09);
+  --red-soft: rgba(244, 63, 94, 0.09);
+  --sky-soft: rgba(6, 182, 212, 0.09);
+
+  --accent-border: rgba(37, 99, 235, 0.18);
+  --accent-glow: rgba(37, 99, 235, 0.16);
+  --indigo-border: rgba(79, 70, 229, 0.18);
+  --indigo-glow: rgba(79, 70, 229, 0.16);
+  --success-border: rgba(16, 185, 129, 0.18);
+  --success-glow: rgba(16, 185, 129, 0.18);
+  --warning-border: rgba(245, 158, 11, 0.18);
+  --warning-glow: rgba(245, 158, 11, 0.18);
+  --danger-border: rgba(244, 63, 94, 0.18);
+  --danger-glow: rgba(244, 63, 94, 0.18);
+  --sky-border: rgba(6, 182, 212, 0.18);
+
+  /* Radii */
+  --radius-panel: 18px;
+  --radius-stage: 14px;
+  --radius-pill: 999px;
+
+  /* Shadows & Bento Elevation */
+  --card-shadow: 0 1px 2px rgba(15, 23, 42, 0.025), 0 10px 26px -8px rgba(15, 23, 42, 0.055), 0 0 0 1px rgba(15, 23, 42, 0.045);
+  --card-shadow-hover: 0 2px 6px rgba(15, 23, 42, 0.035), 0 14px 32px -10px rgba(37, 99, 235, 0.10), 0 0 0 1px rgba(37, 99, 235, 0.10);
+  --bento-shadow-float: 0 18px 40px -12px rgba(15, 23, 42, 0.08);
+
+  /* Feature Teaser & Airy Subsurface Stage (Synced Language) */
+  --bento-subsurface-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(244, 247, 252, 0.90) 100%);
+  --bento-subsurface-hover-bg: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(238, 244, 252, 0.94) 100%);
+  --teaser-stage-bg: var(--bento-subsurface-bg);
+  --teaser-stage-border: rgba(15, 23, 42, 0.065);
+  --teaser-pill-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 0 0 1px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Surfaces & Canvas (Layered Elevation Hierarchy) */
+  --canvas: #0b101b;
+  --background: #0b101b;
+  --surface: #121927;
+  --surface-secondary: #182235;
+  --surface-tertiary: #1f2c43;
+  --overlay: #161f31;
+  --sidebar: #0e1524;
+  --sidebar-active: rgba(59, 130, 246, 0.15);
+  --topbar-bg: #101828;
+
+  /* Typography & Foreground */
+  --foreground: #f1f5f9;
+  --muted: #94a3b8;
+
+  /* Form & Input Fields */
+  --field-background: #0f1624;
+  --field-foreground: #f1f5f9;
+  --field-placeholder: #7e8da3;
+  --field-border: rgba(255, 255, 255, 0.13);
+
+  /* Borders & Dividers */
+  --border: rgba(255, 255, 255, 0.075);
+  --separator: rgba(255, 255, 255, 0.07);
+
+  /* Brand & Accent (Basic Blue Dark) */
+  --accent: #60a5fa;
+  --accent-hover: #93c5fd;
+  --accent-foreground: #090e1a;
+  --focus: #60a5fa;
+  --indigo: #818cf8;
+  --indigo-text: #a5b4fc;
+
+  /* Charts */
+  --chart-income: #60a5fa;
+  --chart-expense: #94a3b8;
+  --chart-grid: #1f2b3d;
+
+  /* Status Colors (Semantic) */
+  --success: #34d399;
+  --success-foreground: #05291c;
+  --success-text: #34d399;
+  --warning: #fbbf24;
+  --warning-foreground: #331f06;
+  --warning-text: #fbbf24;
+  --danger: #fb7185;
+  --danger-foreground: #3b0d17;
+  --danger-text: #fb7185;
+  --state-pickup: #818cf8;
+  --state-shipping: #22d3ee;
+  --sky-text: #22d3ee;
+
+  /* Soft Pastel Tints & Micro-borders */
+  --blue-soft: rgba(59, 130, 246, 0.16);
+  --indigo-soft: rgba(129, 140, 248, 0.16);
+  --green-soft: rgba(52, 211, 153, 0.16);
+  --amber-soft: rgba(251, 191, 36, 0.16);
+  --red-soft: rgba(251, 113, 133, 0.16);
+  --sky-soft: rgba(34, 211, 238, 0.16);
+
+  --accent-border: rgba(96, 165, 250, 0.25);
+  --accent-glow: rgba(96, 165, 250, 0.25);
+  --indigo-border: rgba(129, 140, 248, 0.25);
+  --indigo-glow: rgba(129, 140, 248, 0.25);
+  --success-border: rgba(52, 211, 153, 0.25);
+  --success-glow: rgba(52, 211, 153, 0.25);
+  --warning-border: rgba(251, 191, 36, 0.25);
+  --warning-glow: rgba(251, 191, 36, 0.25);
+  --danger-border: rgba(251, 113, 133, 0.25);
+  --danger-glow: rgba(251, 113, 133, 0.25);
+  --sky-border: rgba(34, 211, 238, 0.25);
+
+  /* Radii */
+  --radius-panel: 18px;
+  --radius-stage: 14px;
+  --radius-pill: 999px;
+
+  /* Shadows & Bento Elevation */
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.30), 0 12px 28px -8px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.045), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --card-shadow-hover: 0 4px 14px rgba(0, 0, 0, 0.35), 0 18px 36px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 0 0 1px rgba(96, 165, 250, 0.22);
+  --bento-shadow-float: 0 20px 48px -12px rgba(0, 0, 0, 0.65);
+
+  /* Feature Teaser & Airy Subsurface Stage (Synced Language) */
+  --bento-subsurface-bg: linear-gradient(135deg, rgba(22, 31, 49, 0.94) 0%, rgba(59, 130, 246, 0.06) 100%);
+  --bento-subsurface-hover-bg: linear-gradient(135deg, rgba(26, 37, 58, 0.96) 0%, rgba(59, 130, 246, 0.10) 100%);
+  --teaser-stage-bg: var(--bento-subsurface-bg);
+  --teaser-stage-border: rgba(255, 255, 255, 0.075);
+  --teaser-pill-shadow: 0 2px 6px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}

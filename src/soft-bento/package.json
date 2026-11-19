@@ -1,0 +1,27 @@
+{
+  "name": "@soft-bento/ui",
+  "version": "3.0.0",
+  "description": "Soft Bento UI design layer on top of HeroUI v3, Tailwind CSS v4, React Aria, and Lucide.",
+  "type": "module",
+  "sideEffects": [
+    "./styles.css",
+    "./foundation/*.css",
+    "./primitives/*.css",
+    "./patterns/*.css"
+  ],
+  "exports": {
+    ".": "./index.ts",
+    "./styles.css": "./styles.css",
+    "./foundation/tokens.css": "./foundation/tokens.css",
+    "./foundation/motion.css": "./foundation/motion.css",
+    "./primitives/heroui.css": "./primitives/heroui.css",
+    "./patterns/shell.css": "./patterns/shell.css"
+  },
+  "peerDependencies": {
+    "@heroui/react": "^3.0.0",
+    "@heroui/styles": "^3.0.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

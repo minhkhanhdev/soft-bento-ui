@@ -1,0 +1,1272 @@
+/**
+ * Soft Bento UI Design System - HeroUI v3 Overrides & Bento Primitives
+ * Applies domain-agnostic Soft Bento aesthetic to HeroUI slots and kit primitives.
+ * Contains zero hex literals; all color roles resolve via CSS variables.
+ */
+
+/* ==========================================================================
+   1. Cards & Panels (Soft Bento Hairline & 2-Tier Elevation)
+   ========================================================================== */
+
+.panel,
+[data-slot="card"],
+.card {
+  border-radius: var(--radius-panel);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+  background-color: var(--surface);
+  transition: box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.panel {
+  min-width: 0;
+  min-height: 0;
+}
+
+.panel-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.panel-body,
+.card__content {
+  min-width: 0;
+  min-height: 0;
+  gap: 0;
+}
+
+/* ==========================================================================
+   2. Panel Title & Icon Badge (Unified Header Language)
+   ========================================================================== */
+
+.panel-title-row,
+.panel-title-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--foreground);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  min-width: 0;
+}
+
+.panel-title-row.has-subtitle {
+  align-items: flex-start;
+}
+
+.panel-title-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.panel-title-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.panel-subtitle {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.bento-subsurface {
+  background: var(--bento-subsurface-bg);
+  border: 1px solid var(--border);
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+@media (hover: hover) {
+  .bento-subsurface-interactive:hover {
+    background: var(--bento-subsurface-hover-bg);
+    border-color: var(--accent-border);
+  }
+}
+
+.panel-icon-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 150ms ease;
+}
+
+.panel-icon-badge svg {
+  width: 15px;
+  height: 15px;
+}
+
+.panel-icon-blue {
+  background-color: var(--blue-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+}
+
+.panel-icon-indigo {
+  background-color: var(--indigo-soft);
+  color: var(--indigo-text);
+  border: 1px solid var(--indigo-border);
+}
+
+.panel-icon-emerald,
+.panel-icon-green {
+  background-color: var(--green-soft);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+}
+
+.panel-icon-amber {
+  background-color: var(--amber-soft);
+  color: var(--warning-text);
+  border: 1px solid var(--warning-border);
+}
+
+.panel-icon-sky {
+  background-color: var(--sky-soft);
+  color: var(--sky-text);
+  border: 1px solid var(--sky-border);
+}
+
+/* ==========================================================================
+   3. StatCard & Metric Display (Airy Bento KPI)
+   ========================================================================== */
+
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  gap: 6px;
+  justify-content: space-between;
+  padding: 13px 14px 11px;
+}
+
+.stat-header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+  z-index: 2;
+}
+
+.stat-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  flex: 1;
+}
+
+.stat-header [data-slot="card-title"],
+.stat-header .card__title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.25;
+}
+
+.stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: var(--blue-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+  border: 1px solid var(--accent-border);
+}
+
+.stat-icon-emerald {
+  background-color: var(--green-soft);
+  color: var(--success-text);
+  border-color: var(--success-border);
+}
+
+.stat-icon-indigo {
+  background-color: var(--indigo-soft);
+  color: var(--indigo-text);
+  border-color: var(--indigo-border);
+}
+
+.stat-icon-amber {
+  background-color: var(--amber-soft);
+  color: var(--warning-text);
+  border-color: var(--warning-border);
+}
+
+.stat-title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+}
+
+.stat-help-trigger.button {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  padding: 0;
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  opacity: 0.72;
+  flex-shrink: 0;
+}
+
+.stat-help-trigger.button svg {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+}
+
+.stat-help-trigger.button:hover,
+.stat-help-trigger.button[data-hovered="true"] {
+  opacity: 1;
+  color: var(--foreground);
+  background-color: var(--surface-secondary);
+}
+
+.stat-help-tooltip {
+  max-width: 240px;
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+
+.stat-value {
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+}
+
+.currency-unit {
+  font-size: 0.72em;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1px;
+}
+
+.stat-meta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.stat-glow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1.5px 7px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+  text-shadow: none;
+}
+
+.stat-glow-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: currentColor;
+  box-shadow: 0 0 6px currentColor;
+  flex-shrink: 0;
+}
+
+.stat-glow-positive {
+  color: var(--success-text);
+  background-color: var(--green-soft);
+  border: 1px solid var(--success-border);
+  box-shadow: 0 0 10px var(--success-glow);
+}
+
+.stat-glow-warning {
+  color: var(--warning-text);
+  background-color: var(--amber-soft);
+  border: 1px solid var(--warning-border);
+  box-shadow: 0 0 10px var(--warning-glow);
+}
+
+.stat-glow-danger {
+  color: var(--danger-text);
+  background-color: var(--red-soft);
+  border: 1px solid var(--danger-border);
+  box-shadow: 0 0 10px var(--danger-glow);
+}
+
+.stat-glow-info {
+  color: var(--accent);
+  background-color: var(--blue-soft);
+  border: 1px solid var(--accent-border);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.stat-glow-indigo {
+  color: var(--indigo-text);
+  background-color: var(--indigo-soft);
+  border: 1px solid var(--indigo-border);
+  box-shadow: 0 0 10px var(--indigo-glow);
+}
+
+.stat-sub-status {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.stat-sparkline {
+  position: absolute;
+  right: 10px;
+  bottom: 7px;
+  width: clamp(86px, 7.2vw, 114px);
+  height: clamp(34px, 2.9vw, 44px);
+  pointer-events: none;
+  opacity: 0.88;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.45) 0%, #000 22%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.45) 0%, #000 22%);
+}
+
+.stat-sparkline-indigo {
+  color: var(--state-pickup);
+}
+
+.stat-sparkline-emerald {
+  color: var(--success);
+}
+
+.stat-sparkline-amber {
+  color: var(--warning);
+}
+
+.stat-sparkline-blue {
+  color: var(--accent);
+}
+
+.stat-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.25;
+  transition: opacity 0.15s ease;
+}
+
+.stat-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.stat-link-badge {
+  border-radius: var(--radius-pill);
+}
+
+.stat-link-badge:hover {
+  text-decoration: none;
+  opacity: 0.86;
+}
+
+/* ==========================================================================
+   4. FeatureTeaser Component & Showcase Stage
+   ========================================================================== */
+
+.feature-teaser-panel {
+  min-height: 0;
+}
+
+.feature-teaser-panel .panel-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.feature-teaser-status {
+  background-color: var(--blue-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  font-size: 10.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding-inline: 8px;
+  height: 22px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.feature-teaser {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(7px, 0.55vw, 10px);
+}
+
+.feature-teaser-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1vw, 16px);
+  padding: clamp(8px, 0.75vw, 14px) clamp(12px, 1vw, 18px);
+  border-radius: var(--radius-stage);
+  background: var(--teaser-stage-bg);
+  border: 1px solid var(--teaser-stage-border);
+  overflow: hidden;
+}
+
+.feature-teaser-stage::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  right: -15%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--blue-soft) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.feature-teaser-media {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-teaser-img {
+  width: clamp(62px, 5.2vw, 88px);
+  height: clamp(62px, 5.2vw, 88px);
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 18px rgba(37, 99, 235, 0.14));
+}
+
+.feature-teaser-media svg {
+  width: clamp(62px, 5.2vw, 88px);
+  height: clamp(62px, 5.2vw, 88px);
+  display: block;
+}
+
+.feature-teaser-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2px, 0.25vw, 5px);
+  position: relative;
+  z-index: 1;
+}
+
+.feature-teaser-beta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 7px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 600;
+  width: fit-content;
+  background-color: var(--blue-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+}
+
+.feature-teaser-heading {
+  font-size: clamp(12.5px, 0.85vw, 14.5px);
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.feature-teaser-desc {
+  font-size: clamp(11px, 0.7vw, 12px);
+  color: var(--muted);
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.feature-teaser-pills {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(6px, 0.45vw, 8px);
+  flex-shrink: 0;
+}
+
+.feature-teaser-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: clamp(5px, 0.4vw, 7px) 8px;
+  border-radius: var(--radius-pill);
+  background-color: var(--surface-secondary);
+  border: none;
+  box-shadow: none;
+  font-size: clamp(10.5px, 0.65vw, 11.5px);
+  font-weight: 600;
+  color: var(--foreground);
+  white-space: nowrap;
+}
+
+.feature-teaser-pill svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   5. HeroUI v3 Component Polish & Overrides
+   ========================================================================== */
+
+/* Button Secondary: softened hairline + micro-shadow (NO pressed transform override) */
+.bento-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.button > .bento-icon,
+.button .bento-icon {
+  pointer-events: none;
+}
+
+.button:not(.button--icon-only) {
+  border-radius: 10px;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.button--md:not(.button--icon-only) {
+  height: 34px;
+  min-height: 34px;
+  padding-inline: 12px;
+}
+
+.button--sm:not(.button--icon-only) {
+  height: 32px;
+  min-height: 32px;
+  padding-inline: 10px;
+}
+
+/* Shared standalone fields and TextField composition use the same surface. */
+.input,
+.textarea {
+  width: 100%;
+  border: 1px solid var(--field-border);
+  border-radius: 10px;
+  background: var(--field-background);
+  color: var(--field-foreground);
+  font-size: 13px;
+}
+
+.input {
+  height: 38px;
+  min-height: 38px;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.input:focus-visible,
+.textarea:focus-visible {
+  border-color: var(--accent);
+}
+
+.button--secondary {
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+  color: var(--foreground);
+}
+
+@media (hover: hover) {
+
+  .button--secondary:hover,
+  .button--secondary[data-hovered="true"] {
+    background-color: var(--surface-secondary);
+    border-color: var(--field-border);
+  }
+}
+
+/* Popover & Flyouts */
+.popover,
+[data-slot="popover"],
+.dropdown__popover,
+.date-picker__popover {
+  border-radius: var(--radius-stage);
+  border: 1px solid var(--border);
+  background-color: var(--overlay);
+  box-shadow: var(--bento-shadow-float);
+  color: var(--foreground);
+}
+
+/* Tooltip (Soft Bento surface & readable wrapping) */
+.tooltip,
+[data-slot="tooltip-content"] {
+  background-color: var(--overlay);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  box-shadow: var(--bento-shadow-float);
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* Modal & Dialogs */
+.action-dialog {
+  width: min(640px, calc(100vw - 24px));
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.action-dialog > .card {
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  max-width: none;
+  max-height: none;
+  width: 100%;
+  background: transparent;
+}
+
+.modal__dialog,
+[data-slot="dialog"],
+.alert-dialog__dialog {
+  border-radius: var(--radius-panel);
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  box-shadow: var(--bento-shadow-float);
+  color: var(--foreground);
+}
+
+.modal__dialog.preview-dialog,
+.preview-dialog[data-slot="dialog"] {
+  max-height: calc(100dvh - 32px);
+}
+
+.modal__backdrop,
+.alert-dialog__backdrop {
+  background-color: rgba(11, 16, 27, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Select & Dropdown triggers */
+.select__trigger,
+[data-slot="select-trigger"] {
+  border-radius: 10px;
+  border: 1px solid var(--field-border);
+  background-color: var(--field-background);
+  color: var(--field-foreground);
+}
+
+.select__popover {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  box-shadow: var(--bento-shadow-float);
+}
+
+/* Table: Quiet Chrome Header, Hairline Separators & Clean Row Hover */
+.table-root {
+  --table-border-color: var(--separator);
+}
+
+.table-root .table__header,
+.table-root .table__header tr {
+  background: transparent;
+  background-color: transparent;
+}
+
+.table-root .table__column {
+  background: transparent;
+  background-color: transparent;
+  border-radius: 0;
+  color: var(--muted);
+  border-bottom: 1px solid var(--separator);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.table__row {
+  transition: background-color 150ms ease;
+}
+
+.table-root--secondary .table__row:hover .table__cell,
+.table-root--secondary .table__row[data-hovered="true"] .table__cell {
+  background-color: transparent;
+}
+
+.table__row[data-hovered="true"],
+.table__row:hover {
+  background-color: var(--surface-secondary);
+}
+
+.table__cell {
+  border-bottom: 1px solid var(--separator);
+  user-select: text;
+}
+
+/* Toast */
+.toast,
+[data-slot="toast"] {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  box-shadow: var(--bento-shadow-float);
+  color: var(--foreground);
+}
+
+/* Tabs (Segmented Soft Bento Track) */
+.tabs__list-container {
+  background-color: var(--surface-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 3px;
+}
+
+.tabs__tab {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--muted);
+  border-radius: 9px;
+}
+
+.tabs__tab[data-selected="true"] {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.tabs__indicator {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+/* RangeCalendar inside Modal: compact dialog, balanced grid, true circular cells */
+.modal__dialog.range-dialog,
+.range-dialog[data-slot="dialog"] {
+  width: min(328px, calc(100vw - 32px));
+  max-width: 100%;
+}
+
+.range-dialog .range-calendar {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.range-dialog .range-calendar__header {
+  padding-bottom: 10px;
+}
+
+.range-dialog .range-calendar__cell {
+  font-size: 13px;
+}
+
+.range-dialog .range-calendar__cell .range-calendar__cell-button {
+  border-radius: var(--radius-pill);
+}
+
+.range-dialog .range-calendar__cell[data-selected="true"]:not([data-outside-month="true"]) {
+  border-radius: 0;
+}
+
+.range-dialog .range-calendar__cell[data-selected="true"]:not([data-outside-month="true"]):is(td:first-child > *, [aria-disabled] + td > *),
+.range-dialog .range-calendar__cell[data-selection-start="true"]:not([data-outside-month="true"]) {
+  border-start-start-radius: var(--radius-pill);
+  border-end-start-radius: var(--radius-pill);
+}
+
+.range-dialog .range-calendar__cell[data-selected="true"]:not([data-outside-month="true"]):is(td:last-child > *, td:has(+ [aria-disabled]) > *),
+.range-dialog .range-calendar__cell[data-selection-end="true"]:not([data-outside-month="true"]) {
+  border-start-end-radius: var(--radius-pill);
+  border-end-end-radius: var(--radius-pill);
+}
+
+.range-dialog .modal__body+.modal__footer {
+  margin-top: 14px;
+}
+
+/* Single Calendar inside DatePicker / Month Popovers: synced circular cells */
+.date-picker__popover .calendar__cell .calendar__cell-button,
+.standard-calendar-popover .calendar__cell .calendar__cell-button {
+  border-radius: var(--radius-pill);
+}
+
+.date-picker__popover .calendar__header,
+.standard-calendar-popover .calendar__header {
+  padding-bottom: 8px;
+}
+
+/* ==========================================================================
+   6. StatusPill & Semantic Tone Colors
+   ========================================================================== */
+
+.status-chip.chip {
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 10px;
+  padding-block: 2px;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.status-chip .chip__label {
+  padding-inline: 0;
+}
+
+.status-chip-icon {
+  flex-shrink: 0;
+}
+
+.status-chip-dot {
+  width: 5.5px;
+  height: 5.5px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.status-pill-amber {
+  background: var(--amber-soft);
+  color: var(--warning-text);
+  border: 1px solid var(--warning-border);
+}
+
+.status-pill-amber .status-chip-dot,
+.bento-tone-bg-amber {
+  background: var(--warning);
+}
+
+.status-pill-blue {
+  background: var(--blue-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+}
+
+.status-pill-blue .status-chip-dot,
+.bento-tone-bg-blue {
+  background: var(--accent);
+}
+
+.status-pill-indigo {
+  background: var(--indigo-soft);
+  color: var(--indigo-text);
+  border: 1px solid var(--indigo-border);
+}
+
+.status-pill-indigo .status-chip-dot,
+.bento-tone-bg-indigo {
+  background: var(--state-pickup);
+}
+
+.status-pill-sky {
+  background: var(--sky-soft);
+  color: var(--sky-text);
+  border: 1px solid var(--sky-border);
+}
+
+.status-pill-sky .status-chip-dot,
+.bento-tone-bg-sky {
+  background: var(--state-shipping);
+}
+
+.status-pill-emerald {
+  background: var(--green-soft);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+}
+
+.status-pill-emerald .status-chip-dot,
+.bento-tone-bg-emerald {
+  background: var(--success);
+}
+
+.status-pill-danger {
+  background: var(--red-soft);
+  color: var(--danger-text);
+  border: 1px solid var(--danger-border);
+}
+
+.status-pill-danger .status-chip-dot,
+.bento-tone-bg-danger {
+  background: var(--danger);
+}
+
+.status-pill-neutral {
+  background: var(--surface-secondary);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   7. DataTable Pattern Helpers (Quiet Chrome & Passive Affordances)
+   ========================================================================== */
+
+.bento-table table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.bento-table th.table__column {
+  padding-block: 8px 9px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  background: transparent;
+  background-color: transparent;
+  border-bottom: 1px solid var(--separator);
+}
+
+.bento-table-compact th.table__column {
+  padding-block: 5px 6px;
+}
+
+.bento-table td {
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Full business lists share the Dashboard's Quiet Chrome table foundation. */
+.app-table.table-root {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.app-table table { table-layout: auto; }
+
+.app-table.table-root .table__column {
+  padding: 8px 12px 9px;
+  background: transparent;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  border-bottom: 1px solid var(--separator);
+}
+
+.app-table.table-root .table__cell {
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--separator);
+  background: transparent;
+}
+
+.app-table.table-root .table__row:hover .table__cell,
+.app-table.table-root .table__row[data-hovered="true"] .table__cell {
+  background: var(--surface-secondary);
+}
+
+.app-table.table-root tbody tr:last-child .table__cell { border-bottom: 0; }
+
+/* Unified Table Toolbar & HeroUI Pagination Footer */
+.card.bento-table-card,
+.bento-table-card {
+  padding: 0;
+  overflow: hidden;
+  gap: 0;
+}
+
+.card__header.bento-table-toolbar,
+.bento-table-toolbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid var(--separator);
+}
+
+.card__header.bento-table-toolbar:has(+ .bento-table-filters),
+.bento-table-toolbar:has(+ .bento-table-filters) {
+  padding-bottom: 4px;
+  border-bottom: 0;
+}
+
+.bento-table-filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px 12px;
+  border-bottom: 1px solid var(--separator);
+}
+
+.bento-table-toolbar > .bento-table-filters {
+  padding: 0;
+  border-bottom: 0;
+}
+
+.table__footer,
+.bento-table-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--separator);
+  background: transparent;
+}
+
+.bento-pagination.pagination {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+}
+
+.bento-pagination-summary.pagination__summary {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.bento-pagination-summary strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.bento-pagination-controls.pagination__content {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.bento-pagination .pagination__link {
+  min-width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.bento-pagination .pagination__link--nav {
+  padding-inline: 8px;
+  gap: 4px;
+}
+
+.bento-pagination .pagination__link[data-active="true"],
+.bento-pagination .pagination__link[aria-current="page"] {
+  background-color: var(--sidebar-active);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .bento-table-toolbar,
+  .bento-table-filters,
+  .table__footer,
+  .bento-table-footer {
+    padding-inline: 14px;
+  }
+
+  .bento-pagination-controls.pagination__content {
+    margin-left: 0;
+  }
+}
+
+.bento-row-interactive {
+  cursor: pointer;
+}
+
+.bento-col-right {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.bento-col-action {
+  width: 34px;
+  padding-inline: 2px 6px;
+  text-align: right;
+}
+
+.row-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color var(--motion-fast, 150ms) var(--ease-smooth, ease);
+}
+
+.bento-table tbody tr:hover .row-chevron,
+.bento-table tbody tr[data-hovered="true"] .row-chevron {
+  color: var(--accent);
+}
+
+/* ==========================================================================
+   8. HorizontalBarChart Pattern
+   ========================================================================== */
+
+.bento-bar-chart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+  gap: 6px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.bento-bar-chart *:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.state-bars {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3px;
+}
+
+.state-row.button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(98px, 108px) minmax(0, 1fr) 54px;
+  align-items: center;
+  gap: 8px;
+  height: auto;
+  min-height: 23px;
+  padding-block: 3px;
+  padding-inline: 5px;
+  margin-inline: -5px;
+  border-radius: 7px;
+  text-align: left;
+  transition: opacity var(--motion-fast, 150ms) ease, background-color var(--motion-fast, 150ms) ease;
+}
+
+@media (hover: hover) {
+  .state-row.button:hover,
+  .state-row.button[data-hovered="true"] {
+    background-color: var(--surface-secondary);
+  }
+}
+
+.state-bar-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.state-bar-label > span {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--foreground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.state-bar-track {
+  position: relative;
+  height: 7px;
+  width: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--surface-secondary);
+  overflow: hidden;
+}
+
+.state-bar-fill {
+  display: block;
+  height: 100%;
+  min-width: 6px;
+  border-radius: var(--radius-pill);
+  transition: width var(--motion-base, 220ms) var(--ease-bar, cubic-bezier(0.22, 1, 0.36, 1));
+}
+
+.state-bar-metrics {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.state-bar-metrics b {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.state-bar-pct {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  min-width: 26px;
+  text-align: right;
+}
+
+.status-empty-note {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 2px;
+}
