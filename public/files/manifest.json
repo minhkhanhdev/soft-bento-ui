@@ -1,0 +1,268 @@
+{
+  "name": "Soft Bento UI",
+  "sourceVersion": "3.0.0",
+  "heroUiVersion": "3.2.7",
+  "distribution": "source-only",
+  "files": [
+    {
+      "path": "src/soft-bento/foundation/motion.css",
+      "bytes": 1541,
+      "sha256": "6064444a5a833c04f529edd11834f599d2185eecaae708117efc48527db0f49a"
+    },
+    {
+      "path": "src/soft-bento/foundation/tokens.css",
+      "bytes": 6307,
+      "sha256": "cfb441a36e0e59b55fb0ed7846e887afa74691dd55eecb83d0278da357ced303"
+    },
+    {
+      "path": "src/soft-bento/foundation/useTheme.ts",
+      "bytes": 1686,
+      "sha256": "22642f082c7bd441aeab4d2aa732bacc4065c91c62362190290dac557ff1ca43"
+    },
+    {
+      "path": "src/soft-bento/index.ts",
+      "bytes": 1557,
+      "sha256": "1fd4e2a7e3647fe009910efa1d169cdae4448fdccc6fb2747403b273b12968a0"
+    },
+    {
+      "path": "src/soft-bento/package.json",
+      "bytes": 780,
+      "sha256": "4fd15594e0e216abd154c8dc27a215324ef03fd45af5771e1d98700554cebc3a"
+    },
+    {
+      "path": "src/soft-bento/patterns/ActionDialog.tsx",
+      "bytes": 743,
+      "sha256": "7bec10fa64a042d75a6a37410e203083d9f052f28613ee32f41e45220d80e59c"
+    },
+    {
+      "path": "src/soft-bento/patterns/AppShell.tsx",
+      "bytes": 13256,
+      "sha256": "25a1da0c1c683cfd79c6ccc95c8fd55bef70b5bc776dcae90bb683e1167c9542"
+    },
+    {
+      "path": "src/soft-bento/patterns/Dialogs.tsx",
+      "bytes": 1465,
+      "sha256": "3e6f9c1b60c1073fe4a1943965694bc379b8ed806b5a1732b3a68d92dfaf4d72"
+    },
+    {
+      "path": "src/soft-bento/patterns/FeatureTeaser.tsx",
+      "bytes": 3085,
+      "sha256": "bd58340acabb5f2c4dbe8b5fe6603810f689e485ba8c5ba8ae39e8656604ef7f"
+    },
+    {
+      "path": "src/soft-bento/patterns/HorizontalBarChart.tsx",
+      "bytes": 3844,
+      "sha256": "3c732b1c659d453801b71b45c4a65787a8723c81bf2b5beeed382efa02fe5e9d"
+    },
+    {
+      "path": "src/soft-bento/patterns/PanelTitle.tsx",
+      "bytes": 1214,
+      "sha256": "91c77f58c429c7ce4ffcbd299d218eb9c73a0ebc5e96a09acce55d10a753f425"
+    },
+    {
+      "path": "src/soft-bento/patterns/shell.css",
+      "bytes": 15769,
+      "sha256": "71dddf3ac08d518f0aa2d39142a79a0e03c74c9de917e733f75dc7e4ecf1dae1"
+    },
+    {
+      "path": "src/soft-bento/patterns/StatCard.tsx",
+      "bytes": 4747,
+      "sha256": "de57e8cd39a93ef74577608b81582d89991425bff0f0a2989a237ed9581ce0e5"
+    },
+    {
+      "path": "src/soft-bento/primitives/Badge.tsx",
+      "bytes": 2000,
+      "sha256": "d529d98ec674aec8aa3a0e24b787c13811491cb78cd6cc344c2c33586a386bbe"
+    },
+    {
+      "path": "src/soft-bento/primitives/Button.tsx",
+      "bytes": 643,
+      "sha256": "9d55179802f8a69d33c5539e686ba83e7946d0f26f8b8d105773e168f7aac788"
+    },
+    {
+      "path": "src/soft-bento/primitives/Card.tsx",
+      "bytes": 1186,
+      "sha256": "22d296f46710dbba59272e0f527412a8316b8ce86a38fcc8388e4fd6bd5dedd0"
+    },
+    {
+      "path": "src/soft-bento/primitives/DataTable.tsx",
+      "bytes": 4386,
+      "sha256": "e1e632e7b512b9a20d02cdbbf9aa8370bf74f1168644e2204102383f70fad14c"
+    },
+    {
+      "path": "src/soft-bento/primitives/heroui.css",
+      "bytes": 26972,
+      "sha256": "28d9d780f803a58da8f085e1e0ae22a62799ffb38d2ebf8c0546ca84feec4b24"
+    },
+    {
+      "path": "src/soft-bento/primitives/Icon.tsx",
+      "bytes": 698,
+      "sha256": "0ad3a4fef6ea57d46a1678f1b8a95c4a021abf62892c558beedecc4b72484fea"
+    },
+    {
+      "path": "src/soft-bento/primitives/TablePagination.tsx",
+      "bytes": 3730,
+      "sha256": "3d9406cd485e03ee9f130ec5bc94ac9533768868b06139493cc44531e6513862"
+    },
+    {
+      "path": "src/soft-bento/README.md",
+      "bytes": 1488,
+      "sha256": "010264e06039999290c6e73d442250a0b7db635a675a7ab9207681b0544b88b4"
+    },
+    {
+      "path": "src/soft-bento/styles.css",
+      "bytes": 137,
+      "sha256": "5a18e5bd8e8b3cfd71926f39b5b2a7c0c7e5c7a683431fbce3d472c351da1259"
+    },
+    {
+      "path": "src/kit/EmptyState.tsx",
+      "bytes": 2141,
+      "sha256": "20439e932eb07c42143db81a14b44eafbb84a8297662f2d9e9e3d6c84fd9e3a1"
+    },
+    {
+      "path": "src/kit/SelectControl.tsx",
+      "bytes": 1329,
+      "sha256": "d8e4c00982f61821ae062ef952faa2e561ab915d62984df26f65ce3189061b86"
+    },
+    {
+      "path": "src/kit/CalendarFields.tsx",
+      "bytes": 4816,
+      "sha256": "3904dfa4862f98ad08cf951287276523eb6d3547e8f13588c99dcd447df2bf32"
+    },
+    {
+      "path": "src/kit/FormNotice.tsx",
+      "bytes": 493,
+      "sha256": "3b62793ba5cdf8974de7f938eb4496785379603cf9b41afc25721c759caa6d87"
+    },
+    {
+      "path": "src/kit/MediaImage.tsx",
+      "bytes": 1432,
+      "sha256": "b0878b9714a70acd09f8a1d0923d144fc884c900bb6492c91a808e0e421f3d46"
+    },
+    {
+      "path": "src/kit/customIcons.tsx",
+      "bytes": 3362,
+      "sha256": "950d3b8e28d8b51fdbe8253c9a0558ec703e2b9ce6091ec99f7142ca2bcf464e"
+    },
+    {
+      "path": "src/kit/icons.ts",
+      "bytes": 2446,
+      "sha256": "9816ab0b0ae4a87ab65d41b1c61b84b288f48d49085ae137a0fbb64354968acc"
+    },
+    {
+      "path": "src/kit/IconCatalog.tsx",
+      "bytes": 2171,
+      "sha256": "968d146ca928d66bd77794ec79db006e3a7eb96dba508fc9c5991dce8411de19"
+    },
+    {
+      "path": "src/kit/illustrations/EmptyOrdersIllustration.tsx",
+      "bytes": 541,
+      "sha256": "ad912db42e621ae27cd6b116cb7e22837341ec0147a440ecc236317db86adb43"
+    },
+    {
+      "path": "src/kit/illustrations/EmptyPrintersIllustration.tsx",
+      "bytes": 615,
+      "sha256": "febb3e78702b8da6cf5a7fc0dbaf2e582abc4edb796c080344b82baff2749264"
+    },
+    {
+      "path": "src/kit/illustrations/EmptySearchIllustration.tsx",
+      "bytes": 544,
+      "sha256": "358726f1a148778b36a25034ec19f72802b6cb969cd7f837b07ef892f00f12a8"
+    },
+    {
+      "path": "src/kit/illustrations/EntityIllustrations.tsx",
+      "bytes": 1504,
+      "sha256": "7847bbcff6cf41aa09d801fc8c67ea50467d1a46771f386a6eef40234d90a2df"
+    },
+    {
+      "path": "src/kit/illustrations/index.ts",
+      "bytes": 569,
+      "sha256": "f9107766526063262ba7d08814409e204ccaadc2cc3fe4af56734abb12529255"
+    },
+    {
+      "path": "src/assets/empty-box-3d.png",
+      "bytes": 1008914,
+      "sha256": "0b611f9501ac4a300ed7870d779d452bcf51ba181c7a4641a81b359b295a749a"
+    },
+    {
+      "path": "src/assets/empty-search-3d.png",
+      "bytes": 1012656,
+      "sha256": "ac0bb1052264960b5412bf897387e1c95718ce209d44fed80e735a733a436ef0"
+    },
+    {
+      "path": "src/kit/adapters.css",
+      "bytes": 2002,
+      "sha256": "9ceaca111eb0f2121faca7c0ec32ffa15eadf52a86d5ff2f537cef417d9b0eae"
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 3592,
+      "sha256": "a14f5e91540270b18ea1aafd8cb7daea464f021fff580645d99108aea5465376"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 670,
+      "sha256": "5524b4ce15af10df1acca99a476cddaedea7b34f6f0a6ea35913f7fa7968260f"
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 446,
+      "sha256": "a7808646f200026c737941673e77cc5c5f03e5583fd0cd392ed1c919b47e2e45"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "bytes": 38,
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "index.html",
+      "bytes": 348,
+      "sha256": "f944169ea9560e9118f96a778c59b9fbe9d624c6c9d6a9b54638d5c523ea4074"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 188,
+      "sha256": "438da4a18c5db040ca0ee38ca1d15c40fc835e760183bdf2efb20977364d5dfa"
+    },
+    {
+      "path": "package.json",
+      "bytes": 920,
+      "sha256": "ef56909592a73024894b4cc1fd486fa1e3d2f48167ad27eb616757a9cd4c7fee"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 407,
+      "sha256": "c357f1e635fa8da5fa37f003e5907df05f68478816c14241a96b78910727bc96"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 46,
+      "sha256": "c1a892e17606f8c6b7bb45058893daf2d40f71705231292c1b3053db08d7f28a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 676,
+      "sha256": "4302220a62b2f4f81cb86e17c989a589e104a07b97f05b3a37428afdea119da3"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2087,
+      "sha256": "29eeee97238e2394afe2c021fb5464638a902f1645f82044bec56c1dbe81ac00"
+    },
+    {
+      "path": "DESIGN.md",
+      "bytes": 2114,
+      "sha256": "627edab17e5eae1bf6ac31b8b4886258d1bd0dc42c382563084501e7a8ad04a0"
+    },
+    {
+      "path": ".agents/skills/soft-bento-ui/references/adoption.md",
+      "bytes": 893,
+      "sha256": "84e2d1c86852e75e5304d775924341c9607fd9a733fead4059657970d438ca60"
+    },
+    {
+      "path": ".agents/skills/soft-bento-ui/SKILL.md",
+      "bytes": 1731,
+      "sha256": "0b1d7732cc637ee28f0eca1ba13f672d529aa51a4145810ae92b33fff13debfc"
+    }
+  ]
+}

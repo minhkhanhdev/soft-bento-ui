@@ -26,8 +26,10 @@ jobs:
           node-version: '22'
       - name: Install dependencies
         run: npm install
-      - name: Build
+      - name: Build UI Kit Docs & Resources
         run: npm run build
+      - name: Add SPA 404 fallback
+        run: cp dist/index.html dist/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

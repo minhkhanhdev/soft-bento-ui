@@ -7,7 +7,7 @@ repository's security, product, workflow and permission rules. Do not overwrite 
 
 - Use React 19+, HeroUI v3 Core, Tailwind CSS v4 and the local `src/soft-bento` layer.
 - Read DESIGN.md and `.agents/skills/soft-bento-ui/SKILL.md` before changing UI.
-- Read `.agents/skills/heroui-react/SKILL.md` and verify the exact v3 API before
+
   implementing a component. Prefer official docs or the HeroUI React MCP server.
 - HeroUI v3 does not require HeroUIProvider. Use compound components and onPress.
 - CSS order: Tailwind, HeroUI styles, Soft Bento styles, then application layout.

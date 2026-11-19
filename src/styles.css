@@ -1,13 +1,4 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 @import "./soft-bento/styles.css";
-@import "./kit/adapters.css";
-
-@theme { --font-sans: 'Inter', sans-serif; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: var(--font-sans); color: var(--foreground); background: var(--canvas); font-size: 14px; }
-.starter-page { display: flex; flex-direction: column; gap: 20px; }
-.starter-stats { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
-.starter-stats .stat-card { min-height: 130px; }
-.starter-note { color: var(--muted); font-size: 12px; line-height: 1.7; }
-@media(max-width:600px) { .starter-stats { grid-template-columns: 1fr; } }
+@import "./page-standards.css";

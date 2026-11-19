@@ -8,8 +8,9 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
-    "build": "tsc -b && vite build",
+    "kit:resources": "node scripts/build-kit-resources.mjs",
+    "dev": "npm run kit:resources && vite --host 127.0.0.1",
+    "build": "npm run kit:resources && tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1"
   },
   "dependencies": {

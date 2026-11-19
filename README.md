@@ -1,6 +1,8 @@
 # Soft Bento UI
 
-Design system & starter UI kit by **minhkhanhdev** — airy Soft Bento surfaces, 4-tier Light/Dark hierarchy, Quiet Chrome tables, studio 3D empty-state illustrations, and official social brand icons.
+Interactive UI Kit documentation, component catalog, 3D studio illustrations, and Agent Skill by **minhkhanhdev**.
+
+Live Docs: https://minhkhanhdev.github.io/soft-bento-ui/
 
 ## Quick Start
 
@@ -10,8 +12,9 @@ npm run dev
 npm run build
 ```
 
-## Structure
+## Included
 
-- `src/soft-bento/` — Portable Soft Bento foundation tokens, motion, theme hook, primitives, and patterns.
-- `src/kit/` — Reusable UI adapters, custom 3D glyphs, social brand icons, and 3D studio illustrations.
-- `.agents/skills/soft-bento-ui/` — Soft Bento UI design skill & rules.
+- `src/soft-bento/` — Portable Soft Bento tokens, motion, Light/Dark theme hook, primitives, and patterns.
+- `src/kit/` — Reusable UI adapters, custom 3D glyphs, social brand icons, and 9 studio 3D empty-state illustrations.
+- `src/features/ui-kit/` — Full interactive UI Kit documentation site & playground.
+- `.agents/skills/soft-bento-ui/` — Author-owned Soft Bento UI Agent Skill & design rules.

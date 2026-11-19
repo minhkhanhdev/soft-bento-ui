@@ -1,0 +1,17 @@
+# Soft Bento UI
+
+Public documentation for the portable UI layer used by PrintOS. React 19, HeroUI v3 and Tailwind CSS v4.
+
+- Introduction: /ui-kit
+- Quick Start: /soft-bento-ui/quick-start
+- All Components: /soft-bento-ui/components
+- Design Principles: /soft-bento-ui/principles
+- Theming: /soft-bento-ui/theming
+- Accessibility: /soft-bento-ui/accessibility
+- Agents: /soft-bento-ui/agents
+- Skills: /soft-bento-ui/skills
+- MCP: /soft-bento-ui/mcp
+- Resources: /soft-bento-ui/resources
+- Agent instructions: /soft-bento-ui/files/AGENTS.md
+- Design contract: /soft-bento-ui/files/DESIGN.md
+- HeroUI v3: https://github.com/minhkhanhdev/soft-bento-ui . @soft-bento/ui is not claimed to be published on npm. Merge instructions into the host repository; never overwrite its permissions or product rules. All examples are synthetic. No credentials or business data are required.
